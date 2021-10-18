@@ -20,11 +20,23 @@ h3 {
   border-bottom: 1px solid lightgray;
 }
 
+body {
+  background-color: green;
+}
+
+/* This applies from 0px to 600px */
+
+@media all and (max-width: 600px) {
+  body {
+    background-color: red;
+  }
+}
+
 /* Groups & Items */
 
 .group {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-bottom: 100px;
 }
 
@@ -35,4 +47,17 @@ h3 {
 
 .item-double {
   flex: 2;
+}
+
+/* Groups and items (Desktop) */
+
+@media all and (min-width: 800px) {
+  section,
+  h1 {
+    padding: 0 10%;
+  }
+
+  .group {
+    flex-direction: row;
+  }
 }
